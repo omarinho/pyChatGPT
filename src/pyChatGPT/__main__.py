@@ -10,14 +10,14 @@ if __name__ == '__main__':
     while True:
         session_token = input('Please enter your session token: ')
         conversation_id = input(
-            'Please enter your conversation id (if you want to continue old chat): '
+            'Please enter your conversation id: '
         )
         chat = ChatGPT(session_token, conversation_id)
         break
 
     clear_screen()
     print(
-        'Conversation started. Type "reset" to reset the conversation. Type "quit" to quit.\n'
+        'Conversation started. Type "reset" to reset the conversation.\n'
     )
     while True:
         prompt = input('\nYou: ')
@@ -25,7 +25,7 @@ if __name__ == '__main__':
             chat.reset_conversation()
             clear_screen()
             print(
-                'Conversation started. Type "reset" to reset the conversation. Type "quit" to quit.\n'
+                'Conversation started. Type "reset" to reset onversation.\n'
             )
             continue
         if prompt.lower() == 'quit':
